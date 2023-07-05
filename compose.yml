@@ -1,0 +1,13 @@
+---
+services:
+  frontend:
+    build: ./app/frontend
+    ports:
+      - 8090:8090
+    environment:
+      BACKEND_HOST: backend
+      BACKEND_PORT: 8080
+  backend:
+    build: ./app/backend
+    ports:
+      - 8080:8080
