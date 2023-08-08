@@ -19,3 +19,14 @@ jobs:
 
     - name: Compile
       run: make compile
+
+    - name: Test
+      run: make test
+      
+  # test:
+  #   runs-on: ubuntu-latest
+  #   # on: pull_request
+  #   # depends: build
+  #   - name: Test
+  #     run: make test
+      
