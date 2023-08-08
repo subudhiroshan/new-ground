@@ -21,4 +21,5 @@ reset:
 	curl localhost:8080/zero
 
 test: up
-	python tests/e2e.py
+	python tests/e2e.py > test_output.json
+	cat test_output.json | jq > test_output_formatted.json

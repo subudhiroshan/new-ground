@@ -19,3 +19,19 @@ jobs:
 
     - name: Compile
       run: make compile
+
+    - name: Test
+      run: make test
+
+    - name: Comment on PR
+      uses: thollander/actions-comment-pull-request@v2
+      with:
+        filePath: test_output_formatted.json
+      
+  # test:
+  #   runs-on: ubuntu-latest
+  #   # on: pull_request
+  #   # depends: build
+  #   - name: Test
+  #     run: make test
+      
