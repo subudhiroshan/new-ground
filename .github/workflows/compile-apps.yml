@@ -21,7 +21,12 @@ jobs:
       run: make compile
 
     - name: Test
-      run: make test
+      run: make test > test_output.json
+
+    - name: Comment on PR
+      uses: thollander/actions-comment-pull-request@v2
+      with:
+        filePath: test_output.json
       
   # test:
   #   runs-on: ubuntu-latest
